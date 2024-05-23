@@ -1,93 +1,215 @@
-<!DOCTYPE html>
-<html lang="eng-AU">
 
-<html>
-	<head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Tharsiha Veluppillai">
-        <meta name="description" content="this page contains all the things I am learning about in HTML">
-		<title>devsoc site</title>
-		<link rel="stylesheet" type = "text/css" href="css/style.css">
-	</head>
+body {
+	background: rgba(32,20,68,1);
+	overflow-x: hidden;
+	color:#bdc0df; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	line-height: 1.6em;
+}
 
-	<body>
+.intro-title-container{
+	width: 39%;
+	margin: auto;
+	overflow: hidden;
+}
 
-		<!--BACKGROUND-->
-=			<!--<div class="container">-->
-				<!--animation-->
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-			<!--</div>-->
+.intro-container{
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
 
-		
-		<!--FIXEDNAVBAR-->
-		<nav id="navbar-fixed-top">
-			<div id="navbar-name">
-				<p>Tharsiha Veluppillai</p>
-			</div>
+.container{
+	width: 85%;
+	margin: auto;
+	overflow: hidden;
+}
 
-			<div id="navbar-links">
-				<a href="mailto:tharsihav@gmail.com"><img src="images/mail.png" alt="Mail"></a>
-        	<a href="https://github.com/tharsihav" target="_blank"><img src="images/gitbub.png" alt="Github"></a>
-        	<a href="https://www.linkedin.com/in/tharsiha-veluppillai-4189a5206/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-			</div>
-		</nav>
+a{ 
+	text-decoration: none;
+	color: #e0c1a3;
+	font-weight: bold;
+}
 
-		<div id="content">		
-			<!--INTROHEADER-->
-			<div id="intro">
-				<div class="intro-title-container">
-					<div class="intro-title">
-						<h1>hi, its <span id="intro-title-name">tharsiha :)</span></h1>
-					</div>
-				</div>
-				
-				<div class="intro-container">
-					<div class="intro-subtitle">I code sometimes</div>
-					<div class="intro-desc">
-						I am intrigued with how technolgy impacts society and am keen to learn various skills to create and improve software that impacts how people utilise technology in their lives!!
-					</div>
-				</div>
-			</div>
 
-			<!--ABOUT-->
-			<div id="about">
-				<div class="container">
-					<div class="about-title">about me</div>
-					<div class="about-content">
-						<p>I am currently a <b>Computer Science</b> student at
-						<a href="https://www.unsw.edu.au/">UNSW</a>, aiming to grow my proficiency in software development, amongst other technical skills.</p>
-						<p>At the moment I am familar with <b>C, Javascript</b> and a bit of <b>Python.</b></p>
-						<p>In my spare time I like focus on my hobbies:</p>
-						<ul>
-							<li>Dancing (Bharathantyam)</li>
-							<li>Guitar (self-taught)</li>
-							<li>Sewing/altering clothes</li>
-							<li>Painting (gouche)</li>
-							<li>Building off-brand legos (sigh) and listening to music</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+/*FIXEDNAVBAR*/
+#navbar-fixed-top{
+	background: rgba(32,20,68,1);
+	position: fixed;
+	overflow: hidden;
+	top: 0px;
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-			<!--EXPERIENCE/PROJECTS-->
-			<div id="experience">
-				<div class="container">
-					<div class="experience-title">experience</div>
-						<div class="experience-content">
-							<p>I've created a few small local games - like hangman - but I'm hoping to expand my experience/portfolio with more large-scale projects (hopefully with the guidance of devsoc!!)</p>
-						</div>
-				</div>
-			</div>
+#navbar-name {
+	color: #e0c1a3;
+    font-size: 15px;
+	font-weight: bold;
+	margin: 10px;
+	margin-top: 20px;
+    display: inline-block;
+}
 
-		</div> <!--content div-->
+#navbar-links{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 30px;
+}
 
-		<footer id = "main-footer">
-			<p>Site by<br>Tharsiha Veluppillai 2024</p>
+#navbar-links a {
+    display: inline-block;
+    margin-left: 5px;
+	padding: 5px;
+}
 
-		</footer>
-	</body>
-</html>
+#navbar-links a img {
+    max-width: 50px; 
+    vertical-align: middle;
+}
+
+
+/*BACKGROUND*/
+/*https://www.sliderrevolution.com/resources/css-animated-background/*/
+.circle {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border: solid 1px #D7D4E4;
+	border-radius: 50%;
+	transform-origin: top left;
+	transform: scale(0) rotate(0deg) translate(-50%, -50%);
+	animation: circle 12s ease-in forwards infinite;
+}
+.circle:nth-child(2n) {
+	border-color: #FFF ;
+}
+.circle:nth-child(2) {
+	animation-delay: 2s;
+	left: 25vw;
+	top: 40vh;
+}
+
+.circle:nth-child(3) {
+	animation-delay: 4s;
+	left: 45vw;
+	top: 100vh;
+}
+
+.circle:nth-child(4) {
+	animation-delay: 6s;
+	left: 75vw;
+	top: 65vh;
+}
+.circle:nth-child(5) {
+	animation-delay: 8s;
+	left: 90vw;
+	top: 20vh;
+}
+
+
+  /* animates background*/
+@keyframes circle {
+	from {
+	  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+	  opacity: .5;
+	}
+	to {
+	  transform: scale(20) rotate(960deg) translate(-50%, -50%);
+	  opacity: 0;
+	}
+}
+  
+
+/*INTRO*/
+#intro{
+	text-align: center;
+	margin: auto;
+	padding-top: 200px;
+	overflow: hidden;
+}
+
+/*INTRO-TITLE typing effect*/
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+.intro-title {
+	color: #fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	overflow: hidden; 
+	border-right: .15em solid #e0c1a3; /* cursor */
+	white-space: nowrap; /* keep on one line as being typed */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em;
+	animation: 
+	  typing 3.5s steps(35, end),
+	  blink-caret 0.8s step-end infinite;
+  }
+  
+  /* animates typing */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+  
+  /* cursor */
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #e0c1a3 }
+}
+
+
+#intro-title-name{
+	color: #e0c1a3;
+	font-weight: 700;
+}
+
+.intro-subtitle{
+	font-size: 20px;
+	letter-spacing: 2px;
+    font-weight: 300;
+	margin-top: 36px;
+	margin-bottom: 20px;
+}
+
+.intro-desc{
+    padding-bottom: 50px
+}
+
+/*ABOUT*/
+.about-title{
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #e3e7f1;
+	margin-top: 36px;
+	margin-bottom: 20px;
+}
+
+.about-content ul{
+	list-style-position: outside;
+	list-style-type:square;
+}
+
+li::marker {
+	color: #e0c1a3;
+  }
+
+/*EXPERIENCE*/
+.experience-title{
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #e3e7f1;
+	margin-top: 36px;
+	margin-bottom: 20px;
+}
+#main-footer{
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.5em;
+	margin-top: 100px;
+	position: relative;
+}
